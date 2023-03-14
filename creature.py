@@ -35,6 +35,7 @@ class Creature(Document):
         return f"<Creature {self.name} - Atk {self.attack}: {ability_name}>"
 
 
+
 if os.getenv("USE_LOCAL"):
     connect("Creatures")
     logging.debug("Running on local database.")
