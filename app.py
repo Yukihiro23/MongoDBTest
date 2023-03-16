@@ -18,7 +18,13 @@ def den():
 @app.route("/creature")
 def creature():
     name = request.args.get("name")
-    return render_template("creatures.html", name=name)
+
+    creature = Creature.objects.get(name=name)
+
+
+    return render_template("creatures.html", name=name, creature=creature)
+
+
 
 
 if __name__ == '__main__':
